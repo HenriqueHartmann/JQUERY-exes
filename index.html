@@ -1,0 +1,61 @@
+<html>
+
+<style>
+    #div h2{
+        background-color: gray;
+        margin: 0px;
+        padding-left: 10px;
+    }
+
+    #div p{
+        margin-top: 0px;
+        border: 3px solid gray;
+        padding: 5px;
+    }
+
+    .texto-destaque{
+        color: red;
+    }
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#mostra").click(function () {
+           $("#div p").slideToggle("slow");
+           $("#mostra").hide();
+           $("#oculta").show();
+        });
+
+        $("#oculta").click(function () {
+           $("#div p").slideToggle("slow");
+           $("#oculta").hide();
+           $("#mostra").show();
+        });
+
+        $(".texto-destque").hover(function(){
+            $("texto-destque").addClass();
+        })
+    });
+</script>
+    <body>
+        <h1>Mel</h1>
+        <div>
+            <button id="mostra">Mostra</button>
+            <button id="oculta">Oculta</button>
+        </div>
+        <p>Lorem ipsum dolor sit amet, <span class="texto-destaque">consectetur adipisicing elit.</span> Accusamus amet aperiam asperiores aspernatur consequuntur dolorem, earum eveniet hic illum, iste magnam nemo placeat quas quos repellat reprehenderit rerum sequi, voluptatem.</p>
+        <div id="div">
+
+            <h2>ola seu bundja mole</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda at debitis facere, harum illo incidunt, minus molestiae officiis optio pariatur placeat quae, quam reiciendis sapiente tempore tenetur unde vel.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis delectus molestiae officiis saepe voluptas. Autem eveniet harum laboriosam, magni quis quisquam quos? Beatae ipsum perspiciatis quod sequi voluptatem voluptates voluptatibus.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque doloremque eius facere facilis impedit ipsum iste minima nostrum, odit quis ratione reiciendis sed sint suscipit, tempore velit. Aut, eaque
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet, aut corporis dolores doloribus dolorum ducimus expedita fugiat harum impedit, iusto minima odio praesentium provident repudiandae sint soluta suscipit!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda dicta hic ipsam laborum odio quod rem repellendus similique, soluta voluptas voluptatum. Aspernatur dolor exercitationem praesentium rerum! At, nulla quam!
+            </p>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ducimus ea eos esse hic necessitatibus, nobis obcaecati pariatur praesentium quaerat quibusdam rem totam velit voluptas voluptate! Ad dicta quaerat recusandae!</p>
+    </body>
+</html>
