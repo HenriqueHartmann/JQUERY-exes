@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+        .vermelho{
+            color: red;
+        }
+        .importante{
+            font-weight: bold;
+        }
+
+        .teclasnum ul {
+            padding:0px;
+            margin:0px;
+            background-color:#EDEDED;
+            list-style:none;
+        }
+        .teclasnum ul li { display: inline; }
+
+        #del {
+            background-color: darkred;
+            color: #EDEDED;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(this).click(function () {
+                $("#tela").val( $("tela").val().toString() + $(this).attr("value").toString());
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <form>
+            <input id="tela" class="tela" type="text">
+        </form>
+    </div>
+
+    <div id="linha1" class="teclasnum">
+       <ul>
+           <li><button value="7">7</button></li>
+           <li><button value="8">8</button></li>
+           <li><button value="9">9</button></li>
+           <li><button id="del" value="del">DEL</button></li>
+       </ul>
+    </div>
+
+    <div id="linha2" class="teclasnum">
+        <ul>
+            <li><button value="4">4</button></li>
+            <li><button value="5">5</button></li>
+            <li><button value="6">6</button></li>
+            <li><button id="mul" value="mul">X</button></li>
+            <li><button id="div" value="div">/</button></li>
+        </ul>
+    </div>
+
+    <div id="linha3" class="teclasnum">
+        <ul>
+            <li><button value="1">1</button></li>
+            <li><button value="2">2</button></li>
+            <li><button value="3">3</button></li>
+            <li><button id="mais" value="+">+</button></li>
+            <li><button id="menos" value="-">-</button></li>
+        </ul>
+    </div>
+
+    <div id="linha4" class="teclasnum">
+        <ul>
+            <li><button value="0">0</button></li>
+            <li><button value=".">.</button></li>
+            <li><button id="igual" value="=">=</button></li>
+        </ul>
+    </div>
+
+</body>
+</html>

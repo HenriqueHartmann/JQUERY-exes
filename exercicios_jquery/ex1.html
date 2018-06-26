@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+        .vermelho{
+            color: red;
+        }
+        .importante{
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        //QUESTÃO1
+            $("#bt1").click(function () {
+                alert($("header").text());
+            });
+        //END QUESTÃO1
+
+        //QUESTÃO2
+            $("#bt2").click(function () {
+                alert($("header").html());
+            });
+        //END QUESTÃO2
+
+        //QUESTÃO3
+            $("#bt3").click(function () {
+                alert($("input").val());
+            });
+        //END QUESTÃO3
+
+            //QUESTÃO4
+            $("#bt4").click(function () {
+                alert($("#link1").text());
+            });
+            //END QUESTÃO4
+
+            //QUESTÃO5
+            $("#bt5").click(function () {
+                $("#paragrafo1").text('Novo texto paragrafo');
+            });
+            //END QUESTÃO5
+
+            //QUESTÃO6
+            $("#bt6").click(function () {
+                $("#paragrafo2").text('Novo texto paragrafo').css('font-weight', 'bold');
+            });
+            //END QUESTÃO6
+
+            //QUESTÃO7
+            $("#bt7").click(function () {
+                $("input").val('Novo valor do input');
+            });
+            //END QUESTÃO7
+
+            //QUESTÃO8
+            $("#bt8").click(function () {
+                $("#link1").attr("href", "http://araquari.ifc.edu.br");
+            });
+            //END QUESTÃO8
+
+            //QUESTÃO9
+            $("#bt9").click(function () {
+                $("img").attr("src", "apagada.jpg");
+            });
+            //END QUESTÃO9
+
+            //QUESTÃO10
+            $("#bt10").click(function () {
+                $("ol").append("<li>Novo</li>");
+            });
+            //END QUESTÃO10
+
+            //QUESTÃO11
+            $("#bt11").click(function () {
+                $("ol").prepend("<li>Novo</li>");
+            });
+            //END QUESTÃO11
+
+            //QUESTÃO12
+            $("#bt12").click(function () {
+                $("#paragrafo1").prepend("opaaaaaaa");
+            });
+            //END QUESTÃO12
+
+            //QUESTÃO13
+            $("#bt13").click(function () {
+                $("#paragrafo2").append("opaaaaaaa");
+            });
+            //END QUESTÃO13
+
+            //QUESTÃO14
+            $("#bt14").click(function () {
+                $("header h1").remove();
+            });
+            //END QUESTÃO14
+
+            //QUESTÃO15
+            $("#bt15").click(function () {
+                $("#conteudo-principal").empty();
+            });
+            //END QUESTÃO15
+
+            //QUESTÃO16
+            $("#bt16").click(function () {
+                $(".texto").remove();
+            });
+            //END QUESTÃO16
+
+            //QUESTÃO17
+            $("#bt17").click(function () {
+                $(".texto, .outro").remove();
+            });
+            //END QUESTÃO17
+
+            //QUESTÃO18
+            $("#bt18").click(function () {
+                $("#paragrafo1").addClass("azul");
+            });
+            //END QUESTÃO18
+
+            //QUESTÃO19
+            $("#bt19").click(function () {
+                $("#paragrafo2").addClass("vermelho importante");
+            });
+            //END QUESTÃO19
+
+            //QUESTÃO20
+            $("#bt20").click(function () {
+                $("#paragrafo1").removeClass("azul");
+            });
+            //END QUESTÃO20
+
+            //QUESTÃO21
+            $("#bt21").click(function () {
+                $("#paragrafo2").toggleClass("importante");
+            });
+            //END QUESTÃO21
+
+            //QUESTÃO22
+            $("#bt22").click(function () {
+                $(".outro").css('background-color','blue');
+            });
+            //END QUESTÃO22
+
+            //QUESTÃO23
+            $("#bt23").click(function () {
+                $("header h1").css('border','dashed');
+            });
+            //END QUESTÃO23
+
+            //QUESTÃO24
+            $("#bt24").click(function () {
+                alert($("#paragrafo1").css('color'));
+            });
+            //END QUESTÃO24
+
+            //QUESTÃO25
+            $("#bt25").click(function () {
+                $("#paragrafo2").css({"background-color": "blue", "color": "red", "font-size": "25px", "padding": "15px"});
+            });
+            //END QUESTÃO25
+
+            //QUESTÃO26
+            $("#bt26").click(function () {
+               alert($("input").css('width'));
+            });
+            //END QUESTÃO26
+
+            //QUESTÃO27
+            $("#bt27").click(function () {
+                alert($("#paragrafo1").css('height'));
+            });
+            //END QUESTÃO27
+
+            //QUESTÃO28
+            $("#bt28").click(function () {
+                var  paidooutro = $(".outro").parent();
+                paidooutro.css({"border": "solid"});
+            });
+            //END QUESTÃO28
+
+            //QUESTÃO29
+            $("#bt29").click(function () {
+                var  paisdospan = $("span").parents();
+                paisdospan.css({"border": "solid"});
+            });
+            //END QUESTÃO29
+
+            //QUESTÃO30
+            $("#bt30").click(function () {
+                var  filhodotitulo = $("h1").children();
+                filhodotitulo.css({"border": "solid"});
+            });
+            //END QUESTÃO30
+
+            $("#bt31").click(function () {
+                $("portal").load("http://araquari.ifc.edu.br ");
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Página de exercícios - <span class="destaque">jQuery</span></h1>
+    </header>
+    <section id="conteudo-principal">
+        <img src="acesa.jpg" width="100px">
+        <p class="texto" id="paragrafo1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
+        </p>
+        <input type="text" value="caixa de entrada de texto">
+        <ol>
+            <li>Primeiro</li>
+            <li>Segundo</li>
+            <li>Terceiro</li>
+        </ol>
+
+        <p class="texto" id="paragrafo2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
+        </p>
+
+        <p class="outro">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda cum, cupiditate deleniti eaque iusto magnam quae quos sunt suscipit? Asperiores ducimus earum, necessitatibus nisi perspiciatis praesentium quia sunt temporibus.
+        </p>
+        <div id="portal"></div>
+        <a href="http://ifc.edu.br" id="link1">IFC</a> <br>
+        <button id="bt1">Questao 1</button>
+        <button id="bt2">Questao 2</button>
+        <button id="bt3">Questao 3</button>
+        <button id="bt4">Questao 4</button>
+        <button id="bt5">Questao 5</button>
+        <button id="bt6">Questao 6</button>
+        <button id="bt7">Questao 7</button>
+        <button id="bt8">Questao 8</button>
+        <button id="bt9">Questao 9</button>
+        <button id="bt10">Questao 10</button>
+        <button id="bt11">Questao 11</button>
+        <button id="bt12">Questao 12</button>
+        <button id="bt13">Questao 13</button>
+        <button id="bt14">Questao 14</button>
+        <button id="bt15">Questao 15</button>
+        <button id="bt16">Questao 16</button>
+        <button id="bt17">Questao 17</button>
+        <button id="bt18">Questao 18</button>
+        <button id="bt19">Questao 19</button>
+        <button id="bt20">Questao 20</button>
+        <button id="bt21">Questao 21</button>
+        <button id="bt22">Questao 22</button>
+        <button id="bt23">Questao 23</button>
+        <button id="bt24">Questao 24</button>
+        <button id="bt25">Questao 25</button>
+        <button id="bt26">Questao 26</button>
+        <button id="bt27">Questao 27</button>
+        <button id="bt28">Questao 28</button>
+        <button id="bt29">Questao 29</button>
+        <button id="bt30">Questao 30</button>
+        <button id="bt31">SUPREME</button>
+    </section>
+    <footer>
+        Desenvolvido por <span class="destaque">Rafael</span>.
+    </footer>
+</body>
+</html>
